@@ -1,666 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
-     <!-- Site Metas -->
-    <title>Tari Shell - Personal Portfolio</title>  
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-<body id="page-top" class="politics_version">
-
-    <!-- LOADER -->
-    <div id="preloader">
-        <div class="loader">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-    </div><!-- end loader -->
-    <!-- END LOADER -->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Awesome</title>
+		<link rel="shortcut icon" type="image/png" href="https://img.icons8.com/small/64/000000/fire-heart.png"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style type="text/tailwindcss">
+			[x-cloak] { 
+				display: none !important; 
+			}
+			:root {
+				--primary: rgb(88, 40, 244);
+				--primary-hover: rgb(69, 29, 200);
+				--font1: 'Lobster', sans-serif;
+			}
+			h1 {
+				font-size: 4rem;
+				line-height: 1.2;
+				font-weight: bold;
+				margin-bottom: 1rem;
+				font-family: var(--font1);
+			}
+			h2 {
+				font-size: 1.5rem; 
+				font-weight: bold;
+				line-height: 2rem;
+				margin-bottom: 0.75rem;
+			}
+			.font1 {
+				font-family: var(--font1);
+			}
+			.button {
+				display: inline-flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+				text-align: center;
+				border-radius: 0.5rem;
+				cursor: pointer;
+				padding: 0 1rem;
+				min-height: 3.3rem;
+				font-weight: 600;
+				box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+				transition-property: transform;
+				transition-duration: .2s;
+				color: white;
+				background-color: var(--primary);
+			}
+			.button:hover {
+				background-color: var(--primary-hover);
+			}
+			.button:active {
+				transform: scale(0.95);
+			}
+			.navitems>li>a {
+				@apply flex items-center gap-2 h-12 px-4 hover:bg-gray-700 rounded-lg;
+			}
+			.card {
+				display: flex;
+				flex-direction: column;
+				overflow: hidden;
+				position: relative;
+				border-radius: 1rem;
+				box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+				margin-bottom: 2rem;
+				background-color: white;
+				padding-bottom: 1rem;
+			}
+			.hoverlist>* {
+				@apply hover:bg-gray-100 rounded-md transition duration-150;
+			}
+			.hoverlist>*>a {
+				@apply flex items-center p-2;
+			}
+			.highlight {
+				@apply !bg-indigo-100;
+			}
+			.titleBlip {
+				animation: 1s fadeIn;
+			}
+			@keyframes fadeIn {
+				0% { opacity: 0; }
+				10% { opacity: 0; }
+				100% { opacity: 1; }
+			}
+			form {
+				margin-top: 1.5rem;
+			}
+			form p {
+				display: flex;
+				align-items: center;
+				margin-bottom: 1rem;
+			}
+			label, input {
+			display: inline-block;
+			}
+			form p label {
+				width: 7rem;
+				}
+			label {
+				margin: 6px 0 3px;
+			}
+			input, textarea {
+				width: 100%;
+			}
+			input[type="file"], select {
+				background-color: white;
+				padding-left: 0;
+			}
+			label[for="id_remember"] {
+				width: auto;
+				margin-right: 0.5rem;
+			}
+			input[name="remember"] {
+				width: auto;
+			}
+			#id_tags{
+				padding-top: 0.5rem;
+			}
+			#id_tags div {
+				display: inline-block;
+				margin-right: 0.5rem;
+				margin-bottom: 0.5rem;
+			}
+			#id_tags div label {
+				display: inline-flex;
+				align-items: center;
+				border-radius: 9999px;
+				padding: 0.25rem 0.75rem;
+				border: 2px solid rgb(229 231 235);
+				width: auto;
+				cursor: pointer;
+			}
+			#id_tags div label input {
+				width: auto;
+				margin-right: 5px;
+			}
+			.textarea, textarea {
+				margin-bottom: 1rem;
+			}
+			.textarea, textarea, input {
+				border-radius: var(--radius-sm);
+				padding: 1rem 1.2rem;
+				background-color: rgba(232, 240, 254, 1);
+			}
+			.errorlist li {
+				color: rgb(253, 88, 49);
+				padding: 0.5rem;
+				padding-left: 1rem;
+				border-left: 5px solid rgb(253, 88, 49);
+				margin-bottom: 1rem;
+			}
+			.tab {
+				cursor: pointer;
+				padding: 0.3rem;
+				color: rgb(0,0,0,0.4);
+			}
+			.tab.selected {
+				border-bottom: 1px solid grey;
+				color: black;
+			}
+		</style>
+	</head>
 	
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-			<img class="img-fluid" src="images/logo1.jpg" alt="" />
-		</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Stack</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#testimonials">Testimonials</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
-            </li> -->
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contect Me</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-	
-	<div id="home" class="ct-header ct-header--slider ct-slick-custom-dots">
-		<div class="ct-slick-homepage" data-arrows="true" data-autoplay="false">
+	<body class="bg-gray-100">
 
-			<div class="ct-header tablex item" data-background="uploads/c3.jpeg">
-				<div class="ct-u-display-tablex">
-					<div class="inner">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-8 col-lg-8 slider-inner">
-									<h1 class="big animated">Web Dev.[Backend]/Data Analyst</h1>
-									<p class="animated">Tari Shell Ofiyou</p>
-									<a class="btn-new from-middle animated" href="https://drive.google.com/file/d/1LlQMAzC8OKQyE3jDJfkEzhL2A6xGV52M/view?usp=drive_link">Download cv</a>
+		<header x-data="{ mobilenavOpen: false }" class="md:flex items-center justify-between [&>*]:px-8 bg-gray-800 h-20 text-white sticky top-0 z-50">
+			<div class="flex items-center justify-between h-20">
+				<logo>
+					<a class="flex items-center gap-1" href="">
+						<img class="h-8 -mt-1" src="uploads/portfolio-icon.png"/>
+						<span class="text-lg font-bold">My Portfolio</span>
+					</a>
+				</logo>
+				<mobileicon class="md:hidden">
+					<a @click="mobilenavOpen = !mobilenavOpen" class="h-12 w-12 flex items-center justify-center cursor-pointer hover:bg-gray-700 rounded-lg">
+						<img x-show="!mobilenavOpen" class="w-6 h-6 select-none" src="https://img.icons8.com/small/64/ffffff/menu.png"/> 
+						<img x-show="mobilenavOpen" x-cloak class="w-6 h-6 select-none" src="https://img.icons8.com/small/64/ffffff/delete-sign.png"/>
+					</a>
+				</mobileicon>
+			</div>
+			<nav x-show="mobilenavOpen" x-cloak class="md:!block bg-gray-800 h-screen w-screen md:h-auto md:w-auto -mt-20 md:mt-0 absolute md:relative z-[-1]"
+			x-transition:enter="duration-300 ease-out"
+			x-transition:enter-start="opacity-0 -translate-y-96"
+			x-transition:enter-end="opacity-100 translate-y-0"
+			>
+				<ul class="flex items-center navitems flex-col md:flex-row gap-8 md:gap-0 justify-center h-full -translate-y-10 md:translate-y-0">
+					<li><a href="#about" class="hover:text-blue-500">About</a></li>
+					<li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+					<li><a href="#web-projects" class="hover:text-blue-500">Web Projects</a></li>
+					<li><a href="#data-projects" class="hover:text-blue-500">Data Projects</a></li>
+
+					<li x-data="{ dropdownOpen: false }" class="relative">
+						<div x-show="dropdownOpen" x-cloak class="absolute right-0 bg-white text-black shadow rounded-lg w-40 p-2 z-20"
+						x-transition:enter="duration-300 ease-out"
+						x-transition:enter-start="opacity-0 -translate-y-5 scale-90"
+						x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+						>
+							<ul class="hoverlist [&>li>a]:justify-end">
+								<li><a href="#about" class="hover:text-blue-500">About</a></li>
+								<li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+								<li><a href="#web-projects" class="hover:text-blue-500">Web Projects</a></li>
+								<li><a href="#data-projects" class="hover:text-blue-500">Data Projects</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<hero class="grid bg-gray-700 text-white text-center z-10 relative bg-[url('https://live.staticflickr.com/65535/53866465091_3dc5bddeec_c.jpg')]">
+			<div class="col-start-1 row-start-1 bg-gray-800 bg-opacity-40 w-full h-full"></div>
+			<div class="col-start-1 row-start-1 py-20 px-10">
+				<h1 class="titleBlip">Tari Shell Ofiyou</h1>
+				<p class="text-lg font-bold mb-5">Solving Society's Challenges Through Tech</p>
+			</div>    
+		</hero>
+
+		<content class="block  mx-auto mt-12 mb-20 px-6 flex flex-col items-center">
+
+			<div class="w-full md:w-[36rem] lg:w-[50rem]">
+				<div class="card p-6">
+					<div class="text-center flex flex-col items-center">
+						<img class="w-36 h-36 rounded-full object-cover mb-4" src="uploads/tboy2.jpg" />
+
+						<div class="text-center max-w-md">
+							<h1>Tari Shell Ofiyou</h1>
+
+							
+							<div class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+								<div>
+									<a href="https://github.com/Legacy5234" class="bg-white p-4 rounded shadow flex flex-col items-center justify-right hover:bg-gray-100">
+										<img class="h-8 w-8 object-cover" src="uploads/github-icon.svg">Github
+									</a>
+								</div>
+	
+								<div>
+									<a href="https://x.com/TechPreneur_169" class="bg-white p-4 rounded shadow flex flex-col items-center justify-right hover:bg-gray-100">
+										<img class="h-8 w-8 object-cover" src="uploads/x-icon.svg">X
+									</a>
 								</div>
 							</div>
+
+							<div class="my-8">
+								Passionate about innovation and quality, i'm on a mission to leave a lasting impact through my work. 
+								Always eager to collaborate with clients to turn their visions into reality, leveraging my diverse skills to 
+								deliver results that exceed expectations. Connect with me today and let's embark on a journey to digital excellence.
+							</div> 
+							
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- <div class="ct-header tablex item" data-background="uploads/banner-01.jpg">
-				<div class="ct-u-display-tablex">
-					<div class="inner">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-8 col-lg-8 slider-inner">
-									<h1 class="big animated">Hello I'm Ux/Ui Designer</h1>
-									<p class="animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis massa bibendum sodales rhoncus.</p>
-									<a class="btn-new from-middle animated" href="#">Download cv</a>
-								</div>
+			<!--MY TECH STACK-->
+			<section id="skills" class="my-8" x-cloak x-data="{ open: false }">
+				
+				<button @click="open = !open"  class="bg-white p-4 rounded shadow w-full text-center font-semibold hover:bg-gray-100 flex justify-center items-center space-x-2">
+					<span class="font1">My Tech Stack</span>
+
+					<svg :class="{'transform rotate-180': open, 'transform rotate-0': !open}" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+					</svg>
+				</button>
+
+				<div x-show="open" x-transition class="mt-2 space-y-2">
+					
+					<!-- LANGUAGE SECTION-->
+					<div class="text-center card p-4">
+						<h2 class="text-center font-bold">Programming Language</h2>
+
+						<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center items-center">
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center justify-right hover:bg-gray-100">
+								<img src="uploads/python.jpg" alt="python logo" class="h-10 w-15 mb-2">
+								<span class="text-center">Python</span>
 							</div>
-						</div>
+						</div>	
 					</div>
-				</div>
-			</div>
 
-			<div class="ct-header tablex item" data-background="uploads/banner-01.jpg">
-				<div class="ct-u-display-tablex">
-					<div class="inner">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-8 col-lg-8 slider-inner">
-									<h1 class="big animated">Hello I'm Web Developer</h1>
-									<p class="animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis massa bibendum sodales rhoncus.</p>
-									<a class="btn-new from-middle animated" href="#">Download cv</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-			
-		</div><!-- .ct-slick-homepage -->
-	</div><!-- .ct-header --> 
 
-    <div id="about" class="section wb">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="message-box">                        
-                        <h2>About Me</h2>
-						<p>
-							Hey there! I'm Tari Shell Ofiyou, a self-taught web developer specializing in backend development. 
-							My journey in web development began with a passion for architecting robust backend systems that power digital experiences.
-						</p>
+					<!--WEB DEV TOOLKIT SECTION-->
+					<div class="text-center card p-4">
 
-						<p>
-							Driven by values of consistency, working smart, and adaptability, I've cultivated a diverse skill set focused on crafting efficient and scalable solutions to complex problems. From designing data models to optimizing server-side logic, 
-							I thrive on the challenge of bringing ideas to life in the digital realm through the power of backend development.
-						</p>
+						<h2 class="text-center font-bold">Web Dev Toolkit</h2>
 
-						<p>
-							My commitment to continuous learning has led me to stay abreast of the latest trends and technologies in backend development, enabling me to leverage cutting-edge tools and frameworks to deliver exceptional results. Whether it's building APIs, optimizing database performance, or ensuring system security, 
-							I'm dedicated to pushing the boundaries of what's possible in the backend space.
-						</p>
-
-						<p>
-							With a focus on creating value through craftsmanship and innovation, I'm on a mission to leave a lasting impact through my work. 
-							Let's collaborate and turn your backend vision into reality in the digital world!
-						</p>
+						<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 						
-						<ul>
-							<li><b>Follow Me</b></li>
-							<!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
-							<li><a href="https://github.com/Legacy5234"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-							<li><a href="https://twitter.com/TechPreneur_169"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						</ul>
-
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-
-                <div class="col-md-6">
-                    <div class="right-box-pro wow fadeIn">
-						<img src="uploads/tboy2.jpg" alt="" class="img-fluid img-rounded fat-ab">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-	
-    <div id="services" class="section lb">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Tech Stack</h3>
-                <p>Below are the tools i can use to solve your tech related business problem</p>
-            </div><!-- end title -->
-
-            <div class="row">
-				<div class="col-md-6">
-					<div class="services-inner-box">
-						<div class="ser-icon">
-							<img src="uploads/python.jpg" style="height: 85px; width: 85px;" alt="Python Icon">
-						</div>
-						<h2>Python [Advance] <br />
-							[Django,Celery,Pandas,Numpy,Plotly,Matplotlib]</h2>
-						<h2></h2>
-					</div>
-				</div>
-				<!-- end col -->
-
-				<div class="col-md-6">
-					<div class="services-inner-box">
-						<div class="ser-icon">
-							<img src="uploads/details-icon-javascript.png" style="height: 85px; width: 85px;" alt="JavaScript Icon">
-						</div>
-						<h2>Javascript [Basic] <br />
-							</h2>
-						<h2></h2>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<div class="services-inner-box">
-						<div class="ser-icon">
-							<img src="uploads/details-icon-bootstrap.png" style="height: 85px; width: 85px;" alt="Bootstrap Icon">
-						</div>
-						<h2>Bootstrap [Advance] <br />
-							[Html,CSS]</h2>
-						<h2></h2>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src="uploads/mysql.png" style="height: 85px; width: 85px;" alt="MySQL Icon">
-						</div>
-						<h2>SQL [MySQL] [Intermediate] <br />
-							Microsoft-Excel [Advance] </h2>
-					</div>
-                </div>
-
-				<div class="col-md-6">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src="uploads/powerbi.png" style="height: 85px; width: 85px;" alt="MySQL Icon">
-						</div>
-						<h2>Power-Bi [Intermediate] <br />
-						</h2>
-					</div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-	
-	<div id="portfolio" class="section lb">
-		<div class="container">
-			<div class="section-title text-center">
-                <h3>Portfolio</h3>
-                <p>Below a list of all projects showcasing my skills in solving tech related business problem</p>
-            </div><!-- end title -->
-			
-			<div class="gallery-menu text-center row">
-				<div class="col-md-12">
-					<div class="button-group filter-button-group">
-						<button class="btn-new from-middle animated active" data-filter="*">All</button>
-						<button class="btn-new from-middle animated" data-filter=".gal_a">Web Development</button>
-						<button class="btn-new from-middle animated" data-filter=".gal_b">Data Analysis</button>
-						<!-- <button class="btn-new from-middle animated" data-filter=".gal_c">Graphic Design</button> -->
-					</div>
-				</div>
-			</div>
-			
-			<div class="gallery-list row">
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_a">
-					<div class="gallery-single spi-hr fix hover">
-						<img src="uploads/logo1.png" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://t-mart-thja.onrender.com/">
-								<h3>T-Mart</h3>
-								<h4>Student and None-Student Marketplace</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/logo2.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/quantium_retail_analysis.jpg" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%201.ipynb">
-								<h3>Retail Data Analytics</h3>
-								<h4>Python [Pandas & Plotly]</h4>
-								<h4>Virtual Internship-Task 1</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/quantium_retail_analysis.jpg" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%202.ipynb">
-								<h3>Experiment and Uplift Testing</h3>
-								<h4>Python [Pandas & Plotly]</h4>
-								<h4>Virtual Internship-Task 2</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/quantium_retail_analysis.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/quantium_retail_analysis.jpg" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%203.pdf">
-								<h3>Analytics Report</h3>
-								<h4>PowerPoint</h4>
-								<h4>Virtual Internship-Task 3</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/kpmg.png" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%201.ipynb">
-								<h3>Data Quality Assessment</h3>
-								<h4>Python [Pandas]</h4>
-								<h4>Virtual Internship-Task 1</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-05.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/kpmg.png" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%202.ipynb">
-								<h3>Data Analysis & Insights</h3>
-								<h4>Python [Pandas & Plotly]</h4>
-								<h4>Virtual Internship-Task 2</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/kpmg.png" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%203.pdf">
-								<h3>Dashboard and Report</h3>
-								<h4>PowerBI and PowerPoint</h4>
-								<h4>Virtual Internship-Task 3</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/basket_analysis.jpeg" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/PowerBi-Basket_Analysis/blob/main/README.md">
-								<h3>Market Basket Analysis</h3>
-								<h4>PowerBi</h4>
-								<h4>Personal Prjt-1</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/revenue_growth_and_forecast_analysis.png" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a>
-								<a href="https://github.com/Legacy5234/Microsoft_Excel-Business_Revenue_Analysis_And_Forecast/blob/main/README.md">
-									<h3>Revenue Growth and Forecast Analysis</h3>
-									<h4>Microsoft Excel</h4>
-									<h4>Personal Prjt-2</h4>
-								</a>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/revenue_growth_and_forecast_analysis.png" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/pandas_data_cleaning.jpeg" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/Python-Data_Cleaning/blob/main/DATA%20CLEANING%20IN%20PANDAS.ipynb">
-								<h3>Data Cleaning</h3>
-								<h4>Python [Pandas]</h4>
-								<h4>Personal Prjt-3</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single spi-hr fix">
-						<img src="uploads/sales_data_analysis.jpeg" class="img-fluid" alt="Image">
-						<div class="text-hover">
-							<a href="https://github.com/Legacy5234/Python-Sales_Data_Analysis/blob/main/Sales%20Analysis.ipynb">
-								<h3>Sales Data Analysis</h3>
-								<h4>Python [Pandas]</h4>
-								<h4>Personal Prjt-4</h4>
-							</a>
-						</div>
-						<div class="img-overlay">
-							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			</div>
-		</div>
-	</div>
-	
-	 <div id="testimonials" class="section wb">
-        <!-- <div class="container">
-            <div class="section-title text-center">
-                <h3>Testimonials</h3>
-                <p>We thanks for all our awesome testimonials! There are hundreds of our happy customers! </p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="testi-carousel owl-carousel owl-theme">
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3> Wonderful Support!</h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-								<i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_01.png" alt="" class="img-fluid">
-                                <h4>James Fernando </h4>
-                            </div>
-                            
-                        </div>
-                       
-
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3> Awesome Services!</h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-								<i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_02.png" alt="" class="img-fluid">
-                                <h4>Jacques Philips </h4>
-                            </div>
-                           
-                        </div>
-                       
-
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3> Great & Talented Team!</h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-								<i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_03.png" alt="" class="img-fluid">
-                                <h4>Venanda Mercy </h4>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3> Wonderful Support!</h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-								<i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_01.png" alt="" class="img-fluid">
-                                <h4>James Fernando </h4>
-                            </div>
-                            
-                        </div>
-                       
-
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3> Awesome Services!</h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-								<i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_02.png" alt="" class="img-fluid">
-                                <h4>Jacques Philips </h4>
-                            </div>
-                           
-                        </div>
-                     
-
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3> Great & Talented Team!</h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-								<i class="fa fa-quote-right"></i>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_03.png" alt="" class="img-fluid">
-                                <h4>Venanda Mercy </h4>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </div>
-	
-	<!-- <div id="blog" class="section lb">
-		<div class="container">
-			<div class="section-title text-center">
-                <h3>Blog</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div>
-			
-			<div class="row">
-				<div class="col-md-4 col-sm-6 col-lg-4">
-					<figure class="snip1401">
-						<img src="uploads/blog-01.jpg" alt="" />
-						<figcaption>
-							<h3>Quisque auctor lectus interdum</h3>
-							<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa.</p>
-							<ul>
-                                <li>by admin</li>
-                                <li>Apr 21, 2018</li>
-                                <li>Comments</li>
-                            </ul>
-						</figcaption>
-						<i class="ion-ios-home-outline"></i>
-						<a href="#"></a>
-					</figure>
-				</div>
-				<div class="col-md-4 col-sm-6 col-lg-4">
-					<figure class="snip1401 hover">
-						<img src="uploads/blog-02.jpg" alt="" />
-						<figcaption>
-							<h3>Quisque auctor lectus interdum</h3>
-							<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa.</p>
-							<ul>
-                                <li>by admin</li>
-                                <li>Apr 21, 2018</li>
-                                <li>Comments</li>
-                            </ul>
-						</figcaption>
-						<i class="ion-ios-home-outline"></i>
-						<a href="#"></a>
-					</figure>
-				</div>
-				<div class="col-md-4 col-sm-6 col-lg-4">
-					<figure class="snip1401">
-						<img src="uploads/blog-03.jpg" alt="" />
-						<figcaption>
-							<h3>Quisque auctor lectus interdum</h3>
-							<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa.</p>
-							<ul>
-                                <li>by admin</li>
-                                <li>Apr 21, 2018</li>
-                                <li>Comments</li>
-                            </ul>
-						</figcaption>
-						<i class="ion-ios-home-outline"></i>
-						<a href="#"></a>
-					</figure>
-				</div>
-			</div>
-			
-		</div>
-	</div> -->
-
-    <div id="contact" class="section db">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Contact Me</h3>
-                <p>Reach out to me,let's collaborate and build the next big thing</p>
-            </div><!-- end title -->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="contact_form">
-                        <div id="message"></div>
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-							<div class="row">
-								<div class="col-md-6">
-									<h2 class="text-white text-center">Email: tarishell50@gmail.com</h2>
-								</div>
-								<div class="col-md-6">
-									<h2 class="text-white text-center">Phone: 08155255420</h2>
-								</div>
-								
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/django.svg" alt="Django" class="h-10 w-15 mb-2">
+								<span class="text-center">Django</span>
 							</div>
-						</form>
-                    </div>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+								
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/celery.jpeg" alt="Celery" class="h-10 w-15 mb-2">
+								<span class="text-center">Celery</span>
+							</div>
+							
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/details-icon-bootstrap.png" alt="Bootstrap" class="h-10 w-15 mb-2">
+								<span class="text-center">Bootstrap</span>
+							</div>
+							
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/tailwind css.png" alt="Tailwindcss" class="h-10 w-15 mb-2">
+								<span class="text-center">Tailwindcss</span>
+							</div>
+							
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/htmx.png" alt="Htmx" class="h-10 w-15 mb-2">
+								<span class="text-center">Htmx</span>
+							</div>
+							
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/alpine js.jpg" alt="Alpine Js" class="h-10 w-15 mb-2">
+								<span class="text-center">Alpine Js</span>
+							</div>
 
-    <div class="copyrights">
-        <div class="container">
-            <div class="footer-distributed">
-                <div class="footer-left">
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2023 <a href="#"></a>
-                </div>
-            </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
+						</div>
+					</div>
 
-    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+					<!--DATA ANALYSIS TOOLKIT SECTION-->
+					<div class="text-center card p-4">
 
-    <!-- ALL JS FILES -->
-    <script src="js/all.js"></script>
-	<!-- Camera Slider -->
-	<script src="js/jquery.mobile.customized.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script> 
-	<script src="js/parallaxie.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/animated-slider.js"></script>
-	<!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
-</body>
+						<h2 class="text-center font-bold">Data Analysis Toolkit</h2>
+
+						<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+						
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/pandas.png" alt="pandas logo" class="h-10 w-15 mb-2">
+								<span class="text-center">Pandas</span>
+							</div>
+								
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/numpy.png" alt="numpy logo" class="h-10 w-15 mb-2">
+								<span class="text-center">Numpy</span>
+							</div>
+
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/plotly.png" alt="plotly logo" class="h-10 w-15 mb-2">
+								<span class="text-center">Plotly</span>
+							</div>
+
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/matplotlib.png" alt="matplotlib logo" class="h-10 w-15 mb-2">
+								<span class="text-center">Matplotlib</span>
+							</div>
+							
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/powerbi.png" alt="powerbi logo" class="h-10 w-15 mb-2">
+								<span class="text-center">Power Bi</span>
+							</div>
+							
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center hover:bg-gray-100">
+								<img src="uploads/excel.png" alt="excel logo" class="h-10 w-15 mb-2">
+								<span class="text-center">MS Excel</span>
+							</div>
+
+						</div>
+					</div>
+
+
+					<!--RDBMS TOOLKIT SECTION-->
+					<div class="text-center card p-4">
+						<h2 class="text-center font-bold">Relational Database Management System</h2>
+
+						<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center items-center">
+							<div class="bg-white p-4 rounded shadow flex flex-col items-center justify-right hover:bg-gray-100">
+								<img src="uploads/mysql.png" alt="mysql logo" class="h-10 w-15 mb-2">
+								<span class="text-center">MYSQL</span>
+							</div>
+						</div>	
+					</div>
+
+				</div>
+			</section>
+
+			<!--MY STARTUP-->
+			<section id="data-projects" class="my-8" x-cloak x-data="{ open: false }">
+				
+				<button @click="open = !open"  class="bg-white p-4 rounded shadow w-full text-center font-semibold hover:bg-gray-100 flex justify-center items-center space-x-2">
+					<span class="font1">My StartUp</span>
+
+					<svg :class="{'transform rotate-180': open, 'transform rotate-0': !open}" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+					</svg>
+				</button>
+
+				<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+					<article class="card">
+						<figure>
+							<a href="https://t-mart-thja.onrender.com/">
+								<img src="uploads/project images/raw.1.1.png" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">IUO-Mart</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://t-mart-thja.onrender.com/">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+					
+				</div>
+			</section>
+
+			<!--DATA ANALYSIS PROJECTS-->
+			<section id="data-projects" class="my-8" x-cloak x-data="{ open: false }">
+				
+				<button @click="open = !open"  class="bg-white p-4 rounded shadow w-full text-center font-semibold hover:bg-gray-100 flex justify-center items-center space-x-2">
+					<span class="font1">My Data Analysis Projects</span>
+
+					<svg :class="{'transform rotate-180': open, 'transform rotate-0': !open}" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+					</svg>
+				</button>
+
+				<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Python-Data_Cleaning/blob/main/DATA%20CLEANING%20IN%20PANDAS.ipynb">
+								<img src="uploads/project images/pandas_data_cleaning.jpeg" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">Personal Project 1 <br> Data Cleaning <br> [Pandas]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Python-Data_Cleaning/blob/main/DATA%20CLEANING%20IN%20PANDAS.ipynb">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Python-Sales_Data_Analysis/blob/main/Sales%20Analysis.ipynb">
+								<img src="uploads/project images/sales_data_analysis.jpeg" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">Personal Project 2 <br> Sales Data Analysis <br> [Pandas & Plotly]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Python-Sales_Data_Analysis/blob/main/Sales%20Analysis.ipynb">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Microsoft_Excel-Business_Revenue_Analysis_And_Forecast/blob/main/README.md">
+								<img src="uploads/project images/revenue_growth_and_forecast_analysis.png" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">Personal Project 3 <br> Revenue Growth & Forecast Analysis <br> [Microsoft Excel]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Microsoft_Excel-Business_Revenue_Analysis_And_Forecast/blob/main/README.md">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/PowerBi-Basket_Analysis/blob/main/README.md">
+								<img src="uploads/project images/basket_analysis.jpeg" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">Personal Project 4 <br> Market Basket Analysis <br> [Power Bi]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/PowerBi-Basket_Analysis/blob/main/README.md">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%201.ipynb">
+								<img src="uploads/project images/kpmg.png" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">KPMG-Virtual-Internship 1 <br> Data Quality Assessment <br> [Pandas]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%201.ipynb">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%202.ipynb">
+								<img src="uploads/project images/kpmg.png" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">KPMG-Virtual-Internship 2 <br> Data Analysis & Insights <br> [Pandas & Plotly]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%202.ipynb">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%203.pdf">
+								<img src="uploads/project images/kpmg.png" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">KPMG-Virtual-Internship 3 <br> Dashboard & Report <br> [Power Bi & PowerPoint]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Kpmg-Virtual-Internship_Forage/blob/main/Task%203.pdf">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+					
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%201.ipynb">
+								<img src="uploads/project images/quantium_retail_analysis.jpg" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">Forage-Quantium-Virtual-Internship 1 <br> Retail Data Analytics <br> [Pandas & Plotly]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%201.ipynb">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%202.ipynb">
+								<img src="uploads/project images/quantium_retail_analysis.jpg" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">Forage-Quantium-Virtual-Internship 2 <br> Experiment & Uplift Testing <br> [Pandas & Plotly]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%202.ipynb">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%203.pdf">
+								<img src="uploads/project images/quantium_retail_analysis.jpg" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">Forage-Quantium-Virtual-Internship 3 <br> Analytics Report <br> [PowerPoint]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Quantium-Virtual-Internship_Forage/blob/main/Task%203.pdf">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article>
+					
+				</div>
+			</section>
+
+
+			<!--FOOTER-->
+			<footer class="bg-white shadow p-4 text-center">
+				<p>&copy; 2024 Tari Shell Ofiyou</p>
+			</footer>
+
+		</content>
+		
+	</body>
 </html>
