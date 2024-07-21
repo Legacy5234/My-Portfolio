@@ -8,9 +8,14 @@
 		<link rel="shortcut icon" type="image/png" href="https://img.icons8.com/?size=48&id=Meg71w7epZVz&format=png"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 		<script src="https://cdn.tailwindcss.com"></script>
+
+
 		<style type="text/tailwindcss">
 			[x-cloak] { 
 				display: none !important; 
@@ -176,7 +181,7 @@
 			<div class="flex items-center justify-between h-20">
 				<logo>
 					<a class="flex items-center gap-1" href="">
-						<img class="h-8 -mt-1" src="uploads/portfolio-icon.png"/>
+						<img class="h-8 -mt-1" src="https://img.icons8.com/?size=48&id=Meg71w7epZVz&format=png"/>
 						<span class="text-lg font-bold">My Portfolio</span>
 					</a>
 				</logo>
@@ -195,8 +200,7 @@
 				<ul class="flex items-center navitems flex-col md:flex-row gap-8 md:gap-0 justify-center h-full -translate-y-10 md:translate-y-0">
 					<li><a href="#about" class="hover:text-blue-500">About</a></li>
 					<li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-					<li><a href="#web-projects" class="hover:text-blue-500">Web Projects</a></li>
-					<li><a href="#data-projects" class="hover:text-blue-500">Data Projects</a></li>
+					<li><a href="#contact" class="hover:text-blue-500">Contact Me</a></li>
 
 					<li x-data="{ dropdownOpen: false }" class="relative">
 						<div x-show="dropdownOpen" x-cloak class="absolute right-0 bg-white text-black shadow rounded-lg w-40 p-2 z-20"
@@ -207,8 +211,7 @@
 							<ul class="hoverlist [&>li>a]:justify-end">
 								<li><a href="#about" class="hover:text-blue-500">About</a></li>
 								<li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-								<li><a href="#web-projects" class="hover:text-blue-500">Web Projects</a></li>
-								<li><a href="#data-projects" class="hover:text-blue-500">Data Projects</a></li>
+								<li><a href="#contact" class="hover:text-blue-500">Contact Me</a></li>
 							</ul>
 						</div>
 					</li>
@@ -226,7 +229,7 @@
 
 		<content class="block  mx-auto mt-12 mb-20 px-6 flex flex-col items-center">
 
-			<div class="w-full md:w-[36rem] lg:w-[50rem]">
+			<div id="about" class="w-full md:w-[36rem] lg:w-[50rem]">
 				<div class="card p-6">
 					<div class="text-center flex flex-col items-center">
 						<img class="w-36 h-36 rounded-full object-cover mb-4" src="uploads/tboy2.jpg" />
@@ -612,6 +615,26 @@
 				</div>
 			</section>
 
+			<!-- Contact Me Section -->
+			<section id="contact" class="card p-4 py-12 bg-gray-100">
+				<div class="container mx-auto px-4 text-center">
+
+					<div class="card p-4 flex items-center justify-center">
+						<h2 class="text-3xl font-bold mb-8">Contact Me</h2><img class="w-8 h-8" src="uploads/user-icon.png" >
+					</div>
+					
+					<p class="mb-4 text-lg">I'd love to hear from you! Whether you have a question or want to discuss a project, feel free to reach out.</p>
+					<div class="text-xl mb-4">
+						<p class="card p-4">
+							Email: <a href="mailto:your.tboykelvin2@gmail.com" class="hover:underline">tboykelvin2@gmail.com</a>
+						</p>
+						<p class="card p-4">
+							Phone: <a href="tel:+1234567890" class="hover:underline">+123-7026108529</a>
+						</p>
+					</div>
+					<p class="text-lg">Let's collaborate and turn your ideas into the next big thing!</p>
+				</div>
+			</section>
 
 			<!--FOOTER-->
 			<footer class="bg-white shadow p-4 text-center">
