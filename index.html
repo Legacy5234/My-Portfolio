@@ -219,17 +219,17 @@
 			</nav>
 		</header>
 
-		<hero class="grid bg-gray-700 text-white text-center z-10 relative bg-[url('https://live.staticflickr.com/65535/53866465091_3dc5bddeec_c.jpg')]">
+		<hero id="about" class="grid bg-gray-700 text-white text-center z-10 relative bg-[url('https://live.staticflickr.com/65535/53866465091_3dc5bddeec_c.jpg')]">
 			<div class="col-start-1 row-start-1 bg-gray-800 bg-opacity-40 w-full h-full"></div>
 			<div class="col-start-1 row-start-1 py-20 px-10">
-				<h1 class="titleBlip">Tari Shell Ofiyou</h1>
+				<h1 class="titleBlip">techpreneur_169</h1>
 				<p class="text-lg font-bold mb-5">Solving Society's Challenges Through Tech</p>
 			</div>    
 		</hero>
 
 		<content class="block  mx-auto mt-12 mb-20 px-6 flex flex-col items-center">
 
-			<div id="about" class="w-full md:w-[36rem] lg:w-[50rem]">
+			<div class="w-full md:w-[36rem] lg:w-[50rem]">
 				<div class="card p-6">
 					<div class="text-center flex flex-col items-center">
 						<img class="w-36 h-36 rounded-full object-cover mb-4" src="uploads/tboy2.jpg" />
@@ -264,21 +264,21 @@
 			</div>
 
 			<!--MY TECH STACK-->
-			<section id="skills" class="my-8" x-cloak x-data="{ open: false }">
+			<section id="skills" class="my-8"  x-data="{ open: false }">
 				
 				<button @click="open = !open"  class="bg-white p-4 rounded shadow w-full text-center font-semibold hover:bg-gray-100 flex justify-center items-center space-x-2">
-					<span class="font1">My Tech Stack</span>
+					<h3>My Tech Stack</h3>
 
 					<svg :class="{'transform rotate-180': open, 'transform rotate-0': !open}" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 					</svg>
 				</button>
 
-				<div x-show="open" x-transition class="mt-2 space-y-2">
+				<div x-show="open" x-cloak x-transition class="mt-2 space-y-2">
 					
 					<!-- LANGUAGE SECTION-->
 					<div class="text-center card p-4">
-						<h2 class="text-center font-bold">Programming Language</h2>
+						<h3 class="text-center font-bold">Programming Language</h3>
 
 						<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center items-center">
 							<div class="bg-white p-4 rounded shadow flex flex-col items-center justify-right hover:bg-gray-100">
@@ -292,7 +292,7 @@
 					<!--WEB DEV TOOLKIT SECTION-->
 					<div class="text-center card p-4">
 
-						<h2 class="text-center font-bold">Web Dev Toolkit</h2>
+						<h3 class="text-center font-bold">Web Dev. Toolkit</h3>
 
 						<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 						
@@ -386,10 +386,10 @@
 			</section>
 
 			<!--MY STARTUP-->
-			<section id="data-projects" class="my-8" x-cloak x-data="{ open: false }">
+			<section id="data-projects" class="my-8" x-data="{ open: false }">
 				
 				<button @click="open = !open"  class="bg-white p-4 rounded shadow w-full text-center font-semibold hover:bg-gray-100 flex justify-center items-center space-x-2">
-					<span class="font1">My StartUp</span>
+					<h3>My StartUp</h3>
 
 					<svg :class="{'transform rotate-180': open, 'transform rotate-0': !open}" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -401,12 +401,12 @@
 					<article class="card">
 						<figure>
 							<a href="https://t-mart-thja.onrender.com/">
-								<img src="uploads/project images/raw.1.1.png" alt="project image">
+								<img src="uploads/project images/logo2.png" alt="project image">
 							</a>
 						</figure>
 
 						<div class="p-4 pb-2">
-							<h2 class="mb-10 px-4 text-center">IUO-Mart</h2>
+							<h2 class="mb-10 px-4 text-center">T-Mart</h2>
 
 							<div class="flex items-center justify-center gap-2 text-lg mb-5">
 								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://t-mart-thja.onrender.com/">
@@ -420,10 +420,10 @@
 			</section>
 
 			<!--DATA ANALYSIS PROJECTS-->
-			<section id="data-projects" class="my-8" x-cloak x-data="{ open: false }">
+			<section id="data-projects" class="my-8" x-data="{ open: false }">
 				
 				<button @click="open = !open"  class="bg-white p-4 rounded shadow w-full text-center font-semibold hover:bg-gray-100 flex justify-center items-center space-x-2">
-					<span class="font1">My Data Analysis Projects</span>
+					<h3>Data Analysis Projects</h3>
 
 					<svg :class="{'transform rotate-180': open, 'transform rotate-0': !open}" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -626,10 +626,11 @@
 					<p class="mb-4 text-lg">I'd love to hear from you! Whether you have a question or want to discuss a project, feel free to reach out.</p>
 					<div class="text-xl mb-4">
 						<p class="card p-4">
-							Email: <a href="mailto:your.tboykelvin2@gmail.com" class="hover:underline">tboykelvin2@gmail.com</a>
+							<span class="font-bold">Email:</span><a href="mailto:tboykelvin2@gmail.com" class="hover:underline">tboykelvin2@gmail.com</a>
 						</p>
+
 						<p class="card p-4">
-							Phone: <a href="tel:+1234567890" class="hover:underline">+123-7026108529</a>
+							<span class="font-bold">Phone:</span><a href="+1237026108529" class="hover:underline">+1237026108529</a>
 						</p>
 					</div>
 					<p class="text-lg">Let's collaborate and turn your ideas into the next big thing!</p>
