@@ -265,6 +265,41 @@
 				</div>
 			</section>
 
+			<!--WEB DEV. PROJECTS-->
+			<section id="data-projects" class="my-8" x-data="{ open: false }">
+				
+				<button @click="open = !open"  class="bg-white p-4 rounded shadow w-full text-center font-semibold hover:bg-gray-100 flex justify-center items-center space-x-2">
+					<h3>Web Dev. Projects</h3>
+
+					<svg :class="{'transform rotate-180': open, 'transform rotate-0': !open}" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+					</svg>
+				</button>
+
+				<div x-show="open" x-transition x-cloak class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+					<!-- <article class="card">
+						<figure>
+							<a href="https://github.com/Legacy5234/Python-Data_Cleaning/blob/main/DATA%20CLEANING%20IN%20PANDAS.ipynb">
+								<img src="uploads/project images/pandas_data_cleaning.jpeg" alt="project image">
+							</a>
+						</figure>
+
+						<div class="p-4 pb-2">
+							<h2 class="mb-10 px-4 text-center">Personal Project 1 <br> Data Cleaning <br> [Pandas]</h2>
+
+							<div class="flex items-center justify-center gap-2 text-lg mb-5">
+								<a class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white" href="https://github.com/Legacy5234/Python-Data_Cleaning/blob/main/DATA%20CLEANING%20IN%20PANDAS.ipynb">
+								   Click
+								</a>
+							</div>
+						</div>
+					</article> -->
+
+					<P class="card p-4">Projects currently in progress</P>					
+				</div>
+			</section>
+
 			<!--DATA ANALYSIS PROJECTS-->
 			<section id="data-projects" class="my-8" x-data="{ open: false }">
 				
